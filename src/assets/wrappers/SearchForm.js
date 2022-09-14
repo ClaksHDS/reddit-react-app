@@ -7,6 +7,8 @@ const Wrapper = styled.div`
     margin: 0 auto;
     margin-top: 2rem;
     margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
   }
   .form-input {
     width: 100%;
@@ -14,6 +16,13 @@ const Wrapper = styled.div`
     max-width: 600px;
     padding: 1rem;
     margin-top: 1rem;
+  }
+  .btn-search {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--grey-600);
+    font-size: 1.5rem;
   }
 `;
 
