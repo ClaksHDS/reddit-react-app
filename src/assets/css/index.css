@@ -162,3 +162,7 @@ ul {
   color: var(--primary-200);
   background: var(--primary-700);
 }
+
+.full-page {
+  min-height: 100vh;
+}
