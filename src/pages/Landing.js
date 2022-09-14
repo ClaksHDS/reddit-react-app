@@ -1,5 +1,5 @@
 import React from "react";
-import { Logo } from "../components";
+import { Logo, SearchForm } from "../components";
 
 const Landing = () => {
   return (
@@ -7,6 +7,7 @@ const Landing = () => {
       <nav>
         <Logo />
       </nav>
+      <SearchForm />
     </main>
   );
 };
