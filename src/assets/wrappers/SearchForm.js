@@ -5,17 +5,18 @@ const Wrapper = styled.div`
     width: 90vw;
     max-width: var(--maxWidth);
     margin: 0 auto;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+    padding-top: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   .form-input {
     width: 100%;
     border: none;
-    max-width: 600px;
-    padding: 1rem;
+    max-width: 500px;
+    padding: 0.75rem;
     margin-top: 1rem;
+    background: var(--primary-50);
   }
   .btn-search {
     background: none;

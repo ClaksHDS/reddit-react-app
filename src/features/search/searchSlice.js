@@ -1,17 +1,22 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import getData from "../../utils/api";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   query: "",
-  isLoading: false,
-  redditPosts: [],
 };
 
 const searchSlice = createSlice({
   name: "searchRedditPosts",
   initialState,
+  reducers: {
+    setSearchQuery(state, action) {
+      state.query = action.payload;
+    },
+    clearSearchQuery(state, action) {
+      state.query = "";
+    },
+  },
 });
 
-export const getRedditPost = createAsyncThunk("search/getRedditPost");
-
+export const selectSearchQuery = (state) => state.searchRedditPosts.query;
+export const { setSearchQuery, clearSearchQuery } = searchSlice.actions;
 export default searchSlice.reducer;
