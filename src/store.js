@@ -1,4 +1,4 @@
-import { configureStore, createAsyncThunk } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import searchSlice from "./features/search/searchSlice";
 import { redditPostSlice } from "./features/card/cardSlice";
 

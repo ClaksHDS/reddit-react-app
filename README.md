@@ -17,3 +17,4 @@ Goal : The app will allow users to view and search posts and see comments attach
 - Styled Components
 - Axios
 - Normalize.css
+- markdown-to-jsx

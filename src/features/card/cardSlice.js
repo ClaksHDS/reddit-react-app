@@ -32,18 +32,49 @@ export const redditPostSlice = createSlice({
       state.isLoading = true;
       state.hasError = false;
     },
-    [getPosts.fulfilled]: (state, action) => {
-      state.isLoading = false;
-      state.posts = action.payload;
-    },
     [getPosts.rejected]: (state) => {
       state.isLoading = false;
       state.hasError = true;
     },
+    [getPosts.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      //state.posts = action.payload;
+      if (action.payload.error) {
+        state.hasError = true;
+        return;
+      }
+      let posts = [];
+      let postsResponse = action.payload.data.children;
+      postsResponse.forEach((post) => {
+        if (post.kind !== "t3") return;
+        let newPost = {
+          author: post.data.author,
+          created: post.data.created,
+          id: post.data.id,
+          isVideo: post.data.is_video,
+          link: post.data.permalink,
+          media: post.data.media?.reddit_video,
+          numOfComments: post.data.num_comments,
+          postHint: post.data.post_hint,
+          score: post.data.score,
+          subreddit: post.data.subreddit_name_prefixed,
+          text: post.data.selftext,
+          title: post.data.title,
+          thumbnail: {
+            url: post.data.thumbnail,
+            height: post.data.thumbnail_height,
+            width: post.data.thumbnail_width,
+          },
+          url: post.data.url,
+        };
+        posts.push(newPost);
+      });
+      state.posts = [...posts];
+    },
   },
 });
 
-//export const selectPost = (state) => state.redditPost.posts;
+export const selectPosts = (state) => state.posts;
 export const selectPostIsLoading = (state) => state.redditPost.isLoading;
 export const selectPostHasError = (state) => state.redditPost.hasError;
 export default redditPostSlice.reducer;
