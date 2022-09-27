@@ -13,7 +13,7 @@ const Wrapper = styled.aside`
     align-items: center;
     z-index: 1;
     opacity: 0;
-    transition: var(--transiton);
+    transition: var(--transition);
   }
   .show-sidebar {
     z-index: 99;
