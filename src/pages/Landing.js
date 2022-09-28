@@ -1,19 +1,14 @@
 import React from "react";
-import { Logo, SearchForm, Loading, Card } from "../components";
+import { Logo, SearchForm, Loading, Card, Navbar } from "../components";
 import { useSelector } from "react-redux";
 
 const Landing = () => {
-  const { query, isLoading, redditPosts } = useSelector(
-    (store) => store.searchRedditPosts
-  );
-
   return (
     <main>
       <nav>
-        <Logo />
+        <Navbar />
       </nav>
       <SearchForm />
-      {isLoading ? <Loading /> : <Card />}
     </main>
   );
 };
