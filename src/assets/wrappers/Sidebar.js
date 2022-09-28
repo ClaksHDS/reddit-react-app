@@ -1,54 +1,59 @@
 import styled from "styled-components";
 
-const Wrapper = styled.aside`
-  @media (min-width: 990px) {
-    display: none;
+const Wrapper = styled.div`
+  text-align: center;
+  h3 {
+    color: var(--primary-500);
+    text-transform: capitalize;
   }
-  .sidebar-container {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+  .sidebar-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    z-index: 1;
-    opacity: 0;
-    transition: var(--transition);
+    padding: 1rem 1.5rem;
   }
-  .show-sidebar {
-    z-index: 99;
-    opacity: 1;
-  }
-  .content {
-    background: var(--white);
-    height: 95vh;
-    border-radius: var(--borderRadius);
-    padding: 4rem 2rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .toggle-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  .close-btn {
+    font-size: 1.75rem;
     background: transparent;
     border-color: transparent;
-    font-size: 1.75rem;
-    color: var(--primary-700);
+    color: var(--primary-600);
+    transition: var(--transition);
     cursor: pointer;
+    margin-top: 0.2rem;
   }
-  .subreddits-container {
-    border-radius: var(--borderRadius);
+  .close-btn:hover {
+    color: var(--primary-300);
   }
-  .subreddits-container:hover {
-  }
-  .icon {
-    font-size: 1.5rem;
-    display: grid;
-    place-items: center;
+  .reddit-icon {
+    font-size: 3rem;
+    background: transparent;
+    border-color: transparent;
     color: var(--primary-500);
+  }
+  .logo {
+    justify-self: center;
+    height: 45px;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    transition: var(--transition);
+    transform: translate(-100%);
+    z-index: -1;
+  }
+  .show-sidebar {
+    transform: translate(0);
+    z-index: 99;
+  }
+
+  @media (min-width: 990px) {
+    .sidebar {
+      display: none;
+    }
   }
 `;
 

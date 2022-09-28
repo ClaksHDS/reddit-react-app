@@ -1,5 +1,12 @@
 import React from "react";
-import { Logo, SearchForm, Loading, Card, Navbar } from "../components";
+import {
+  Logo,
+  SearchForm,
+  Loading,
+  Card,
+  Navbar,
+  Sidebar,
+} from "../components";
 import { useSelector } from "react-redux";
 
 const Landing = () => {
@@ -9,6 +16,7 @@ const Landing = () => {
         <Navbar />
       </nav>
       <SearchForm />
+      <Sidebar />
     </main>
   );
 };

@@ -6,5 +6,16 @@ import Post from "./Post";
 import Subreddits from "./Subreddits";
 import NoMatch from "./NoMatch";
 import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
 
-export { Logo, SearchForm, Loading, Card, Post, Subreddits, NoMatch, Navbar };
+export {
+  Logo,
+  SearchForm,
+  Loading,
+  Card,
+  Post,
+  Subreddits,
+  NoMatch,
+  Navbar,
+  Sidebar,
+};

@@ -24,6 +24,9 @@ const Wrapper = styled.div`
     cursor: pointer;
     color: var(--grey-600);
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 

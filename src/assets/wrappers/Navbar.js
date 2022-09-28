@@ -22,7 +22,7 @@ const Wrapper = styled.nav`
     align-items: center;
   }
   .toggle-btn:hover {
-    color: var(--primary-400);
+    color: var(--primary-300);
   }
   @media (min-width: 990px) {
     position: sticky;
