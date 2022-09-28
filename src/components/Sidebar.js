@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleSidebar } from "../features/sidebarSlice/sidebarSlice";
 import Logo from "./Logo";
+import { Subreddits } from "../components";
 /* react icons */
 import { AiOutlineClose } from "react-icons/ai";
 import { FcReddit } from "react-icons/fc";
@@ -28,9 +29,7 @@ const Sidebar = () => {
           </button>
         </div>
         <FcReddit className='reddit-icon' />
-        <h3>select subreddits</h3>
-        {/* add SubredditLinks component */}
-        <p>display components with subredditLinks</p>
+        <Subreddits />
       </aside>
     </Wrapper>
   );

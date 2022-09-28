@@ -1,8 +1,11 @@
-# Codecademy Portfolio Project
+# Reddit Stay Curious
 
-## Reddit application, in the Front-End Engineer course
+Front-end project of a Reddit client application for Codecademy's Front End Engineering Path.
+Reddit is a website where people share links to articles, media and other things on the web.
 
-Goal : The app will allow users to view and search posts and see comments attached to these posts.
+## Features
+
+The app will allow users to browse popular subreddits and search posts and see comments attached to these posts. There is also a search feature to find posts matching a given search term.
 
 ### Technologies
 
@@ -11,6 +14,7 @@ Goal : The app will allow users to view and search posts and see comments attach
 - React Router
 - React-icons
 - HTML, CSS, Javascript
+- Reddit JSON API
 
 ### Additional libraries
 

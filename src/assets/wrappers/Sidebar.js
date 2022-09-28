@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   text-align: center;
-  h3 {
+  h4 {
     color: var(--primary-500);
     text-transform: capitalize;
   }
@@ -10,7 +10,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1.5rem;
   }
   .close-btn {
     font-size: 1.75rem;

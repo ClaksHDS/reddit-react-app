@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Logo,
-  SearchForm,
-  Loading,
-  Card,
-  Navbar,
-  Sidebar,
-} from "../components";
-import { useSelector } from "react-redux";
+import { SearchForm, Navbar, Sidebar } from "../components";
 
 const Landing = () => {
   return (
