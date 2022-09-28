@@ -9,16 +9,23 @@ The app will allow users to browse popular subreddits and search posts and see c
 
 ### Technologies
 
-- React
-- Redux Toolkit
-- React Router
-- React-icons
 - HTML, CSS, Javascript
+- React v18.2.0
+- React Redux v8.0.2
+- Redux Toolkit v1.8.5
+- React Router v6.4.0
 - Reddit JSON API
 
 ### Additional libraries
 
-- Styled Components
-- Axios
-- Normalize.css
-- markdown-to-jsx
+- React-icons v4.4.0
+- Styled Components v5.3.5
+- Axios v0.27.2
+- Normalize.css v8.0.1
+- markdown-to-jsx v7.1.7
+
+### Management tools
+
+- Figma to wireframe the application abd visualize the end result on smaller and bigger screens.
+- GithubDesktop to handle version control
+- Trello to create a board with a checklist of all the different steps of the project
