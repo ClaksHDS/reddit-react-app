@@ -1,5 +1,5 @@
 import React from "react";
-import { SearchForm, Navbar, Sidebar } from "../components";
+import { SearchForm, Navbar, Sidebar, Main } from "../components";
 
 const Landing = () => {
   return (
@@ -9,6 +9,7 @@ const Landing = () => {
       </nav>
       <SearchForm />
       <Sidebar />
+      <Main />
     </main>
   );
 };

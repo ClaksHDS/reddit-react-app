@@ -7,6 +7,8 @@ import Subreddits from "./Subreddits";
 import NoMatch from "./NoMatch";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
+import Main from "./Main";
+import SearchResult from "./SearchResult";
 
 export {
   Logo,
@@ -18,4 +20,6 @@ export {
   NoMatch,
   Navbar,
   Sidebar,
+  Main,
+  SearchResult,
 };
