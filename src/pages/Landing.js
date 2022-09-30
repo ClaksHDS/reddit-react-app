@@ -1,17 +1,28 @@
 import React from "react";
-import { SearchForm, Navbar, Sidebar, Main, Posts } from "../components";
+import {
+  SearchForm,
+  Navbar,
+  Sidebar,
+  Posts,
+  Subreddits,
+  SearchResult,
+} from "../components";
 
 const Landing = () => {
   return (
-    <main>
+    <>
       <nav>
         <Navbar />
       </nav>
-      <SearchForm />
-      <Sidebar />
-      <Main />
-      <Posts />
-    </main>
+      <main>
+        <SearchForm />
+        <Sidebar />
+        <SearchResult />
+      </main>
+      <aside className='subreddits-fullpage'>
+        <Subreddits />
+      </aside>
+    </>
   );
 };
 

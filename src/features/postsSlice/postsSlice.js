@@ -1,73 +1,51 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import {
+  createSlice,
+  createAsyncThunk,
+  createSelector,
+} from "@reduxjs/toolkit";
 import axios from "axios";
 
 //to retrieve posts from the reddit API
-const getPosts = createAsyncThunk("posts/getPosts", async (subreddit) => {
-  const response = await axios(`https://www.reddit.com${subreddit}.json`);
-  const data = await response.json();
-  console.log(data);
-  return data.data.children.map((post) => post.data);
+const getPosts = createAsyncThunk("posts/getPosts", async () => {
+  const response = await axios(`https://www.reddit.com/r/all.json`);
+  const json = await response.json();
+  console.log(json);
+  return json.data.children.map((post) => post.data);
 });
-
 const initialState = {
   posts: [],
-  isLoading: false,
+  loading: false,
   hasError: false,
-  searchTerm: "",
-  selectedSubreddit: "/r/pics/",
 };
 
 const postsSlice = createSlice({
   name: "posts",
   initialState,
   reducers: {
-    loadPosts: (state, action) => {
-      state.posts = action.payload;
+    filterPosts: (state, action) => {
+      state.posts = state.posts.filter((post) => {
+        return post.title.toLowerCase().includes(action.payload.toLowerCase());
+      });
     },
-    startFetchingPosts: (state) => {
-      state.isLoading = true;
+  },
+  extraReducers: {
+    [getPosts.pending]: (state) => {
+      state.loading = true;
       state.hasError = false;
     },
-    getSuccessPosts: (state, action) => {
-      state.isLoading = true;
+    [getPosts.fulfilled]: (state, action) => {
+      state.loading = false;
       state.posts = action.payload;
+      state.hasError = false;
     },
-    getUnsuccessfulPosts: (state) => {
-      state.isLoading = false;
+    [getPosts.rejected]: (state) => {
+      state.loading = false;
       state.hasError = true;
-    },
-    getSearchTerm: (state, action) => {
-      state.searchTerm = action.payload;
-    },
-    getSelectedSubreddit: (state, action) => {
-      state.selectedSubreddit = action.payload;
-      state.searchTerm = "";
     },
   },
 });
 
-export const {
-  loadPosts,
-  startFetchingPosts,
-  getSuccessPosts,
-  getUnsuccessfulPosts,
-  getSearchTerm,
-  getSelectedSubreddit,
-} = postsSlice.actions;
+export const { filterPosts } = postsSlice.actions;
 export { getPosts };
 
 export default postsSlice.reducer;
-
-//to retrieve posts from a subreddit
-export const fetchPosts = (subreddit) => async (dispatch) => {
-  try {
-    dispatch(startFetchingPosts());
-    const posts = await getPosts(subreddit);
-    const postsWithData = posts.map((post) => ({
-      ...post,
-    }));
-    dispatch(getSuccessPosts(postsWithData));
-  } catch (error) {
-    dispatch(getUnsuccessfulPosts());
-  }
-};

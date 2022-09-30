@@ -13,11 +13,10 @@ const Subreddits = () => {
   const { isLoading, hasError, subredditLinks } = useSelector(
     (store) => store.subredditLinks
   );
-  console.log(subredditLinks);
 
   useEffect(() => {
     dispatch(getSubreddits());
-  }, [dispatch]);
+  }, []);
 
   if (isLoading) {
     return <Loading />;

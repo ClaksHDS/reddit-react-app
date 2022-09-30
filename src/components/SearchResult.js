@@ -1,24 +1,35 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Loading, NoMatch } from "../components";
 import { Posts } from "../components";
+import { getPosts } from "../features/postsSlice/postsSlice";
 
 const SearchResult = () => {
+  const dispatch = useDispatch();
   const { isLoading, noMatch, searchTerm } = useSelector(
     (store) => store.searchform
   );
+  const { loading, posts, hasError } = useSelector((store) => store.posts);
 
-  if (isLoading) {
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
+
+  if (loading) {
     return <Loading />;
   }
-  if (noMatch) {
+  if (hasError) {
     return <NoMatch />;
   }
 
   return (
     <section>
-      <h2>results for your search</h2>
-      <Posts />
+      <ul>
+        {posts.map((post) => {
+          return <Posts key={post.id} post={post} />;
+        })}
+      </ul>
     </section>
   );
 };
