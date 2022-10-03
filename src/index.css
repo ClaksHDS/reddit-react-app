@@ -36,7 +36,7 @@ html {
   --grey-800: #243b53;
   --grey-900: #102a43;
   /* rest of the colors */
-  --black: #222;
+  --black: #1d2424;
   --white: #fff;
 
   /*Fonts*/
@@ -133,6 +133,13 @@ ul {
   width: 100%;
   display: block;
   object-fit: cover;
+}
+
+.link {
+  color: var(--textColor);
+}
+.link:hover {
+  color: var(--primary-500);
 }
 
 /* Buttons */

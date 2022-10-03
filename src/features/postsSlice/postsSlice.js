@@ -9,7 +9,6 @@ import axios from "axios";
 const getPosts = createAsyncThunk("posts/getPosts", async () => {
   const response = await axios(`https://www.reddit.com/r/all.json`);
   const json = await response.json();
-  console.log(json);
   return json.data.children.map((post) => post.data);
 });
 const initialState = {
