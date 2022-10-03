@@ -1,8 +1,4 @@
-import {
-  createSlice,
-  createAsyncThunk,
-  createSelector,
-} from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 //to retrieve posts from the reddit API
 const getPosts = createAsyncThunk("posts/getPosts", async () => {

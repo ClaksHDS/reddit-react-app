@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useLocation } from "react-router-dom";
 import { Loading, NoMatch, Post } from "../components";
 import { getPosts } from "../features/postsSlice/postsSlice";
 /* react icons */

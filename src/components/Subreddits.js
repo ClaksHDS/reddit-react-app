@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { getSubreddits } from "../features/subreddits/SubredditSlice";
 import { getSubredditPosts } from "../features/postsSlice/postsSlice";
 import { Loading } from "../components";
@@ -15,7 +14,7 @@ const Subreddits = () => {
 
   useEffect(() => {
     dispatch(getSubreddits());
-  }, []);
+  }, [dispatch]);
 
   if (isLoading) {
     return <Loading />;
