@@ -6,11 +6,11 @@ const Wrapper = styled.aside`
     justify-content: center;
     align-items: center;
     padding: 0.25rem 1rem;
+    background: var(--primary-50);
   }
   ul {
     margin: 0.25rem auto;
     padding: 0.75rem 2rem;
-    background: var(--primary-50);
     height: 100%;
     width: 80vw;
     border-radius: var(--border-radius);
@@ -29,12 +29,25 @@ const Wrapper = styled.aside`
     margin-right: 1rem;
   }
   .subreddit-link {
+    cursor: pointer;
+    background: transparent;
+    border: transparent;
+    padding: 0.215rem 0.75rem;
+    transition: var(--transition);
+    text-transform: capitalize;
+    display: inline-block;
     color: var(--grey-900);
     font-size: 0.55rem;
-    padding: 0;
   }
   .subreddit-link:hover {
     color: var(--primary-500);
+  }
+  @media (min-width: 990px) {
+    .subreddits-container {
+      max-width: 300px;
+      margin-right: 2.75rem;
+      margin-top: 2rem;
+    }
   }
 `;
 

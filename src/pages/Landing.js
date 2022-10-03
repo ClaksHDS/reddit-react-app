@@ -14,14 +14,16 @@ const Landing = () => {
       <nav>
         <Navbar />
       </nav>
-      <main>
+      <header>
         <SearchForm />
+      </header>
+      <main>
         <Sidebar />
-        <SearchResult />
+        <Posts />
+        <aside className='subreddits-fullpage'>
+          <Subreddits />
+        </aside>
       </main>
-      <aside className='subreddits-fullpage'>
-        <Subreddits />
-      </aside>
     </>
   );
 };

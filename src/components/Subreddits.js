@@ -2,9 +2,8 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { getSubreddits } from "../features/subreddits/SubredditSlice";
+import { getSubredditPosts } from "../features/postsSlice/postsSlice";
 import { Loading } from "../components";
-/* react icons */
-
 /* styles */
 import Wrapper from "../assets/wrappers/SubredditLinks";
 
@@ -36,7 +35,7 @@ const Subreddits = () => {
       <div className='subreddits-container'>
         <ul>
           {/* map over subreddits and display a button for each subreddits*/}
-          {subredditLinks.map((subreddit) => {
+          {subredditLinks.slice(0, 15).map((subreddit) => {
             const { id, icon, url, name } = subreddit;
             return (
               <li key={id} className='subreddit'>
@@ -49,9 +48,14 @@ const Subreddits = () => {
                 ) : (
                   ""
                 )}
-                <Link to={url} className='subreddit-link'>
+                <button
+                  className='subreddit-link'
+                  onClick={() =>
+                    dispatch(getSubredditPosts(subreddit.display_name))
+                  }
+                >
                   {name}
-                </Link>
+                </button>
               </li>
             );
           })}
