@@ -1,7 +1,7 @@
 import React from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Loading, NoMatch, Post } from "../components";
+import { Loading, NoMatch, Comments } from "../components";
 import { getPosts } from "../features/postsSlice/postsSlice";
 /* react icons */
 import { BsArrowDownCircle, BsArrowUpCircle } from "react-icons/bs";
@@ -40,7 +40,6 @@ const Posts = () => {
         {posts.map((post) => {
           return (
             <li key={post.id} className='post-wrapper'>
-              <div className='votes-container'></div>
               <div className='post-container'>
                 <div className='post-info'>
                   <p>
@@ -55,37 +54,54 @@ const Posts = () => {
                   </p>
                 </div>
                 <div className='post-title'>
-                  <h4>{post.subreddit_name_prefixed}</h4>
-                  <h3>{post.title}</h3>
+                  <h5>{post.title}</h5>
                 </div>
-                <div className='post-content'>
-                  {/*  {post.url.includes("i.reddit.it") ? (
+                <div className='content-post'>
+                  <div className='votes-container'>
+                    <button className='vote-btn'>
+                      <BsArrowUpCircle />
+                    </button>
+                    <span>{post.ups}</span>
+                    <button className='vote-btn'>
+                      <BsArrowDownCircle />
+                    </button>
+                  </div>
+                  <div className='post-content'>
+                    {/*  {post.url.includes("i.reddit.it") ? (
                     <img
                       src={post.url}
                       alt='illustration of reddit post'
                       className='post-image img'
                     />
                   ) : null} */}
-                  <img src={post.url} alt='' className='img post-image' />
-                  {!post.media ? null : post.media.reddit_video ? (
-                    <video preload='auto' controls className='post-video'>
-                      <source
-                        src={post.media.reddit_video.fallback_url}
-                        type='video/mp4'
-                      />
-                    </video>
-                  ) : null}
-                  {post.url.includes("v.redd.it") ||
-                  post.url.includes("i.redd.it") ? null : (
-                    <div className='post-link'>
-                      <a href={post.url} target='_blank' rel='noreferrer'>
-                        {post.url}
-                      </a>
-                    </div>
-                  )}
+                    <img src={post.url} alt='' className='img post-image' />
+                    {!post.media ? null : post.media.reddit_video ? (
+                      <video preload='auto' controls className='post-video'>
+                        <source
+                          src={post.media.reddit_video.fallback_url}
+                          type='video/mp4'
+                        />
+                      </video>
+                    ) : null}
+                    {post.url.includes("v.redd.it") ||
+                    post.url.includes("i.redd.it") ? null : (
+                      <div className='post-link'>
+                        <a href={post.url} target='_blank' rel='noreferrer'>
+                          {post.url}
+                        </a>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
-              <div className='comments-container'>{console.log(post)}</div>
+              <div className='comments-container'>
+                <p>{post.subreddit_name_prefixed}</p>
+                <button type='button'>
+                  <FaRegCommentDots className='info-icon' />
+                  <span>{post.num_comments} comments</span>
+                </button>
+                <div className='comments'></div>
+              </div>
             </li>
           );
         })}

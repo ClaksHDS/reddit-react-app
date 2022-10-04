@@ -196,9 +196,8 @@ nav {
 main {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: flex-start;
-  padding: 1rem 1rem;
-  margin: 0;
 }
 .subreddits-fullpage {
   display: none;

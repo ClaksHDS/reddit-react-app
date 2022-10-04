@@ -22,7 +22,7 @@ The app will allow users to browse popular subreddits and search posts and see c
 - Styled Components v5.3.5
 - Axios v0.27.2
 - Normalize.css v8.0.1
-- markdown-to-jsx v7.1.7
+- react-markdown v8.0.3
 
 ### Management tools
 

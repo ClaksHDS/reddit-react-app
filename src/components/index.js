@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import SearchResult from "./SearchResult";
 import Posts from "./Posts";
+import Comments from "./Comments";
 
 export {
   Logo,
@@ -18,4 +19,5 @@ export {
   Sidebar,
   SearchResult,
   Posts,
+  Comments,
 };
