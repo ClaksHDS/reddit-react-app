@@ -5,15 +5,14 @@ const Wrapper = styled.aside`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.25rem 1rem;
+    padding: 0.15rem 1rem;
     background: var(--primary-50);
+    border-radius: var(--border-radius);
+    width: 350px;
+    margin: 0 auto;
   }
   ul {
-    margin: 0.25rem auto;
-    padding: 0.75rem 2rem;
-    height: 100%;
-    width: 80vw;
-    border-radius: var(--border-radius);
+    margin: 1rem 2rem;
   }
   .subreddit {
     display: flex;
@@ -22,8 +21,8 @@ const Wrapper = styled.aside`
     margin-bottom: 1rem;
   }
   .subreddit-icon {
-    width: 1.75rem;
-    height: 1.75rem;
+    width: 1.55rem;
+    height: 1.55rem;
     border-radius: 100%;
     vertical-align: baseline;
     margin-right: 1rem;

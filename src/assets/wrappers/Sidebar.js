@@ -25,7 +25,7 @@ const Wrapper = styled.div`
     color: var(--primary-300);
   }
   .reddit-icon {
-    font-size: 3rem;
+    font-size: 2.15rem;
     background: transparent;
     border-color: transparent;
     color: var(--primary-500);
