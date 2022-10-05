@@ -54,7 +54,7 @@ const Wrapper = styled.ul`
     object-fit: contain;
   }
   .post-link {
-    padding-top: 2rem;
+    max-width: 600px;
   }
   .post-link a {
     overflow-wrap: break-word;

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Loading, NoMatch } from "../components";
 import { Posts } from "../components";
-import { getPosts } from "../features/postsSlice/postsSlice";
+import { getPosts, filterPosts } from "../features/postsSlice/postsSlice";
 
 const SearchResult = () => {
   const dispatch = useDispatch();

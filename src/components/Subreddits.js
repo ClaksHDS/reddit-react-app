@@ -33,25 +33,21 @@ const Subreddits = () => {
     <Wrapper>
       <div className='subreddits-container'>
         <ul>
-          {/* map over subreddits and display a button for each subreddits*/}
-          {subredditLinks.slice(0, 15).map((subreddit) => {
-            const { id, icon, url, name } = subreddit;
+          {subredditLinks.slice(0, 14).map((subreddit) => {
+            const { id, icon_img: icon, url, display_name: name } = subreddit;
             return (
               <li key={id} className='subreddit'>
-                {icon ? (
-                  <img
-                    src={icon}
-                    alt='subreddit icon miniature'
-                    className='subreddit-icon'
-                  />
-                ) : (
-                  ""
-                )}
+                <img
+                  src={
+                    icon ||
+                    `https://api.adorable.io/avatars/25/${subreddit.display_name}`
+                  }
+                  alt={name}
+                  className='subreddit-icon'
+                />
                 <button
                   className='subreddit-link'
-                  onClick={() =>
-                    dispatch(getSubredditPosts(subreddit.display_name))
-                  }
+                  onClick={() => dispatch(getSubredditPosts(name))}
                 >
                   {name}
                 </button>
