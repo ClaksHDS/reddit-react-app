@@ -19,7 +19,12 @@ const Navbar = () => {
     <Wrapper>
       <div className='nav-center'>
         <Logo />
-        <button type='button' className='toggle-btn' onClick={toggle}>
+        <button
+          type='button'
+          className='toggle-btn'
+          aria-label='open sidebar'
+          onClick={toggle}
+        >
           <GoThreeBars />
         </button>
       </div>

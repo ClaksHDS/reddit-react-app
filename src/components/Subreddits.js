@@ -48,6 +48,7 @@ const Subreddits = () => {
                 <button
                   className='subreddit-link'
                   onClick={() => dispatch(getSubredditPosts(name))}
+                  aria-label='navigate to the posts of the selected subreddit'
                 >
                   {name}
                 </button>

@@ -25,7 +25,12 @@ const Sidebar = () => {
       >
         <div className='sidebar-header'>
           <Logo className='logo' alt='reddit stay curious logo' />
-          <button className='close-btn' type='button' onClick={toggle}>
+          <button
+            className='close-btn'
+            type='button'
+            aria-label='close sidebar'
+            onClick={toggle}
+          >
             <AiOutlineClose />
           </button>
         </div>

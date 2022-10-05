@@ -58,11 +58,11 @@ const Posts = () => {
                 </div>
                 <div className='content-post'>
                   <div className='votes-container'>
-                    <button className='vote-btn'>
+                    <button className='vote-btn' aria-label='cast a up vote'>
                       <BsArrowUpCircle />
                     </button>
                     <span>{post.ups}</span>
-                    <button className='vote-btn'>
+                    <button className='vote-btn' aria-label='cast a down vote'>
                       <BsArrowDownCircle />
                     </button>
                   </div>
@@ -96,7 +96,7 @@ const Posts = () => {
               </div>
               <div className='comments-container'>
                 <p>{post.subreddit_name_prefixed}</p>
-                <button type='button'>
+                <button type='button' aria-label='show comments of the post'>
                   <FaRegCommentDots className='info-icon' />
                   <span>{post.num_comments} comments</span>
                 </button>
