@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { toggleSidebar } from "../features/sidebarSlice/sidebarSlice";
 import Logo from "./Logo";
 import { Subreddits } from "../components";
+import { Link } from "react-router-dom";
 /* react icons */
 import { AiOutlineClose } from "react-icons/ai";
 import { FcReddit } from "react-icons/fc";
@@ -29,7 +30,9 @@ const Sidebar = () => {
           </button>
         </div>
         <FcReddit className='reddit-icon' />
-        <Subreddits />
+        <Link to='/' onClick={toggle}>
+          <Subreddits />
+        </Link>
       </aside>
     </Wrapper>
   );
