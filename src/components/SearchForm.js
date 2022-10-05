@@ -1,10 +1,14 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setSearch,
   clearSearch,
 } from "../features/searchformSlice/searchformSlice";
+import {
+  filterPosts,
+  getPosts,
+  getSearchPosts,
+} from "../features/postsSlice/postsSlice";
 /* react icons */
 import { FaSistrix } from "react-icons/fa";
 /* styles */
@@ -12,17 +16,22 @@ import Wrapper from "../assets/wrappers/SearchForm";
 
 const SearchForm = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
-  const { searchTerm, isLoading } = useSelector((store) => store.searchform);
+  // get the searchTerm from the searchbar
+  const { searchTerm } = useSelector((store) => store.searchform);
 
-  const handleChange = (term) => {
-    dispatch(setSearch(term));
+  // target the term typed by the user
+  const handleChange = (e) => {
+    const userQuery = e.target.value;
+    dispatch(setSearch(userQuery));
+    if (userQuery.length > 0) {
+      dispatch(getSearchPosts(userQuery));
+    }
   };
 
   const handleSubmit = () => {
+    dispatch(getPosts());
     dispatch(clearSearch());
-    navigate(`/search.json?q=${searchTerm}`);
   };
 
   return (
@@ -32,9 +41,9 @@ const SearchForm = () => {
           type='text'
           className='form-input'
           placeholder='Search'
-          aria-label='Search posts from Reddit'
+          aria-label='Search for a subreddit'
           value={searchTerm}
-          onChange={({ target }) => handleChange(target.value)}
+          onChange={handleChange}
         />
         <button
           type='submit'

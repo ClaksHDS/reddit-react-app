@@ -107,7 +107,7 @@ const Wrapper = styled.ul`
     .post-title,
     .post-content {
       display: grid;
-      text-align: center;
+      text-align: left;
     }
   }
 `;

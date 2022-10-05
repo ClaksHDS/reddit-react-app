@@ -3,7 +3,12 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Loading, NoMatch } from "../components";
 import { Posts } from "../components";
-import { getPosts, filterPosts } from "../features/postsSlice/postsSlice";
+import {
+  getPosts,
+  filterPosts,
+  getSearchPosts,
+} from "../features/postsSlice/postsSlice";
+import { setSearch } from "../features/searchformSlice/searchformSlice";
 
 const SearchResult = () => {
   const dispatch = useDispatch();
@@ -13,7 +18,7 @@ const SearchResult = () => {
   const { loading, posts, hasError } = useSelector((store) => store.posts);
 
   useEffect(() => {
-    dispatch(getPosts());
+    dispatch(getSearchPosts(searchTerm));
   }, [dispatch]);
 
   if (loading) {

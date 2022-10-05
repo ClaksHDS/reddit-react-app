@@ -7,6 +7,18 @@ const getPosts = createAsyncThunk("posts/getPosts", async () => {
   return json.data.children.map((post) => post.data);
 });
 
+//to retrieve posts matching a search
+const getSearchPosts = createAsyncThunk(
+  "posts/getSearchPosts",
+  async (searchTerm) => {
+    const response = await fetch(
+      `https://www.reddit.com/search.json?q=${searchTerm}`
+    );
+    const json = await response.json();
+    return json.data.children.map((post) => post.data);
+  }
+);
+
 // to retrieve posts matching a specific subreddit
 const getSubredditPosts = createAsyncThunk(
   "posts/getSubredditPosts",
@@ -62,10 +74,24 @@ const postsSlice = createSlice({
       state.loading = false;
       state.hasError = true;
     },
+    // handle promises for fetching posts matching a search term
+    [getSearchPosts.pending]: (state) => {
+      state.loading = true;
+      state.hasError = false;
+    },
+    [getSearchPosts.fulfilled]: (state, action) => {
+      state.loading = false;
+      state.posts = action.payload;
+      state.hasError = false;
+    },
+    [getSearchPosts.rejected]: (state) => {
+      state.loading = false;
+      state.hasError = true;
+    },
   },
 });
 
 export const { filterPosts } = postsSlice.actions;
-export { getPosts, getSubredditPosts };
+export { getPosts, getSubredditPosts, getSearchPosts };
 
 export default postsSlice.reducer;
