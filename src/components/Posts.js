@@ -2,7 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Loading, NoMatch, Comments } from "../components";
-import { getPosts } from "../features/postsSlice/postsSlice";
+import { getPosts, getSubredditPosts } from "../features/postsSlice/postsSlice";
+
 /* react icons */
 import { BsArrowDownCircle, BsArrowUpCircle } from "react-icons/bs";
 import { FaUserAstronaut, FaRegCommentDots } from "react-icons/fa";
@@ -95,7 +96,14 @@ const Posts = () => {
                 </div>
               </div>
               <div className='comments-container'>
-                <p>{post.subreddit_name_prefixed}</p>
+                <button
+                  type='button'
+                  aria-label='see posts attached to this subreddit'
+                  onClick={() => dispatch(getSubredditPosts(post.subreddit))}
+                >
+                  <span>{post.subreddit_name_prefixed}</span>
+                </button>
+
                 <button type='button' aria-label='show comments of the post'>
                   <FaRegCommentDots className='info-icon' />
                   <span>{post.num_comments} comments</span>
