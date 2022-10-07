@@ -10,6 +10,7 @@ const Wrapper = styled.aside`
     border-radius: var(--border-radius);
     width: 350px;
     margin: 0 auto;
+    top: 0;
   }
   ul {
     margin: 1rem 2rem;

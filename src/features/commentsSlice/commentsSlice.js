@@ -14,11 +14,17 @@ const initialState = {
   comments: [],
   loadingComments: false,
   errorComments: false,
+  isModalOpen: false,
 };
 
 const commentsSlice = createSlice({
   name: "comments",
   initialState,
+  reducers: {
+    toggleModal: (state) => {
+      state.isModalOpen = !state.isModalOpen;
+    },
+  },
   extraReducers: {
     [getComments.pending]: (state) => {
       state.loadingComments = true;
@@ -37,4 +43,5 @@ const commentsSlice = createSlice({
 });
 
 export { getComments };
+export const { toggleModal } = commentsSlice.actions;
 export default commentsSlice.reducer;

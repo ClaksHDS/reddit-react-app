@@ -1,41 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { getComments } from "../features/commentsSlice/commentsSlice";
 
+/* styles */
+import Wrapper from "../assets/wrappers/Comments";
+
 const Comments = () => {
-  /* const { comments, loadingComments, errorComments } = useSelector(
-    (store) => store.comments
-  ); */
+  const dispatch = useDispatch();
+
   const { posts } = useSelector((store) => store.posts);
   const permalink = posts.map((post) => post.permalink);
-  // new code
-  const [comments, setComments] = useState([]);
+  const { comments } = useSelector((store) => store.comments);
 
-  useEffect(() => {
-    const showComments = async () => {
-      const response = await fetch(`https://www.reddit.com${permalink}.json`);
-      const json = await response.json();
-      setComments(json[1].data.children.map((comment) => comment.data));
-    };
-    showComments();
-  }, [permalink]);
-
-  /*  useEffect(() => {
-    getComments();
+  /* useEffect(() => {
+    dispatch(getComments(permalink));
   }, [permalink]); */
 
   return (
-    <ul>
-      {comments.slice(0, 15).map((comment) => {
-        return (
-          <li key={comment.id}>
-            <p>u/ {comment.author}</p>
-            <ReactMarkdown>{comment.body}</ReactMarkdown>
-          </li>
-        );
-      })}
-    </ul>
+    <Wrapper>
+      <div>
+        <p>hi bob</p>
+        {/*<ul>
+          {comments.slice(0, 15).map((comment) => {
+            return (
+              <li key={comment.id}>
+                <h5>u/ {comment.author}</h5>
+                <ReactMarkdown>{comment.body}</ReactMarkdown>
+              </li>
+            );
+          })}
+        </ul> */}
+      </div>
+    </Wrapper>
   );
 };
 

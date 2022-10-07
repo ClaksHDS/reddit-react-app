@@ -6,6 +6,7 @@ const Wrapper = styled.ul`
   margin: 0 auto;
   padding-top: 2rem;
   .post-wrapper {
+    height: 100%;
     padding: 1rem;
     border: 2px solid var(--primary-100);
     border-radius: var(--borderRadius);
@@ -99,6 +100,10 @@ const Wrapper = styled.ul`
     span {
       color: var(--primary-500);
       cursor: pointer;
+    }
+    .comments {
+      background: var(--primary-50);
+      border-radius: var(--borderRadius);
     }
   }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Loading, NoMatch, Comments } from "../components";
 import { getPosts, getSubredditPosts } from "../features/postsSlice/postsSlice";
@@ -12,8 +12,15 @@ import Wrapper from "../assets/wrappers/Posts";
 
 const Posts = () => {
   const dispatch = useDispatch();
-  const { posts, isLoading, hasError, searchTerm, selectedSubreddit } =
-    useSelector((store) => store.posts);
+  const { posts, isLoading, hasError } = useSelector((store) => store.posts);
+
+  const [displayComments, setDisplayComments] = useState({ display: "none" });
+
+  const showComments = () => {
+    displayComments.display === "none"
+      ? setDisplayComments({ display: "block" })
+      : setDisplayComments({ display: "none" });
+  };
 
   useEffect(() => {
     dispatch(getPosts());
@@ -68,13 +75,6 @@ const Posts = () => {
                     </button>
                   </div>
                   <div className='post-content'>
-                    {/*  {post.url.includes("i.reddit.it") ? (
-                    <img
-                      src={post.url}
-                      alt='illustration of reddit post'
-                      className='post-image img'
-                    />
-                  ) : null} */}
                     <img src={post.url} alt='' className='img post-image' />
                     {!post.media ? null : post.media.reddit_video ? (
                       <video preload='auto' controls className='post-video'>
@@ -104,11 +104,20 @@ const Posts = () => {
                   <span>{post.subreddit_name_prefixed}</span>
                 </button>
 
-                <button type='button' aria-label='show comments of the post'>
+                <button
+                  type='button'
+                  aria-label='show comments of the post'
+                  onClick={showComments}
+                >
                   <FaRegCommentDots className='info-icon' />
                   <span>{post.num_comments} comments</span>
                 </button>
-                <div className='comments'></div>
+                {/* <div style={displayComments} className='comments'>
+                  <Comments permalink={post.permalink} />
+                </div> */}
+              </div>
+              <div style={displayComments} className='comments'>
+                <Comments permalink={post.permalink} />
               </div>
             </li>
           );

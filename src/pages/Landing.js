@@ -5,7 +5,7 @@ import {
   Sidebar,
   Posts,
   Subreddits,
-  SearchResult,
+  Footer,
 } from "../components";
 
 const Landing = () => {
@@ -20,10 +20,14 @@ const Landing = () => {
       <main>
         <Sidebar />
         <Posts />
+
         <aside className='subreddits-fullpage'>
           <Subreddits />
         </aside>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
