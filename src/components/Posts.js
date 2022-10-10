@@ -98,6 +98,7 @@ const Posts = () => {
               <div className='comments-container'>
                 <button
                   type='button'
+                  className='btn-post'
                   aria-label='see posts attached to this subreddit'
                   onClick={() => dispatch(getSubredditPosts(post.subreddit))}
                 >
@@ -106,15 +107,13 @@ const Posts = () => {
 
                 <button
                   type='button'
+                  className='btn-post'
                   aria-label='show comments of the post'
                   onClick={showComments}
                 >
                   <FaRegCommentDots className='info-icon' />
                   <span>{post.num_comments} comments</span>
                 </button>
-                {/* <div style={displayComments} className='comments'>
-                  <Comments permalink={post.permalink} />
-                </div> */}
               </div>
               <div style={displayComments} className='comments'>
                 <Comments permalink={post.permalink} />

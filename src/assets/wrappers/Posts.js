@@ -97,6 +97,9 @@ const Wrapper = styled.ul`
       border: transparent;
       background: transparent;
     }
+    button:hover {
+      color: var(--primary-300);
+    }
     span {
       color: var(--primary-500);
       cursor: pointer;
