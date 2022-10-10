@@ -4,21 +4,32 @@ const Wrapper = styled.div`
   background: var(--primary-50);
   border-radius: var(--borderRadius);
   color: var(--textColor);
-  ul {
-    padding: 0.35rem 1.25rem 1.25rem;
-    height: 100%;
+  padding: 0.05rem 1rem;
+  margin: 1rem;
+  .comment-container {
+    background: var(--white);
+    border-radius: var(--borderRadius);
   }
-  ul li {
-    overflow-wrap: break-word;
-    border-bottom: 2px solid var(--primary-50);
+
+  h5 {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    color: var(--grey-700);
   }
-  ul li h5 {
-    margin-bottom: 0;
-    color: var(--grey-800);
-    font-weight: 500;
+  .icon {
+    margin-right: 0.55rem;
   }
-  ul li p {
-    margin-top: 0;
+  .posted {
+    padding-left: 1rem;
+    padding-bottom: 0;
+    color: var(--grey-600);
+    font-style: italic;
+  }
+
+  .comment {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    color: var(--grey-8s00);
   }
 `;
 export default Wrapper;

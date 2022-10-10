@@ -104,12 +104,7 @@ const Wrapper = styled.ul`
       color: var(--primary-500);
       cursor: pointer;
     }
-    .comments {
-      background: var(--primary-50);
-      border-radius: var(--borderRadius);
-    }
   }
-
   @media (min-width: 990px) {
     max-width: 800px;
     .post-title,
