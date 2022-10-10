@@ -14,6 +14,7 @@ const Posts = () => {
   const dispatch = useDispatch();
   const { posts, isLoading, hasError } = useSelector((store) => store.posts);
 
+  // allow the user to show the comments
   const [displayComments, setDisplayComments] = useState({ display: "none" });
 
   const showComments = () => {
@@ -115,6 +116,7 @@ const Posts = () => {
                   <span>{post.num_comments} comments</span>
                 </button>
               </div>
+
               <div style={displayComments} className='comments'>
                 <Comments permalink={post.permalink} />
               </div>

@@ -5,6 +5,7 @@ import {
   Sidebar,
   Posts,
   Subreddits,
+  ScrollButton,
   Footer,
 } from "../components";
 
@@ -20,6 +21,7 @@ const Landing = () => {
       <main>
         <Sidebar />
         <Posts />
+        <ScrollButton />
 
         <aside className='subreddits-fullpage'>
           <Subreddits />

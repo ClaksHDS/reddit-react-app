@@ -70,7 +70,7 @@ const Wrapper = styled.ul`
     justify-content: center;
     align-items: center;
     button {
-      cursor: pointer;
+      //cursor: pointer;
     }
     span {
       margin-top: 0.55rem;
@@ -80,12 +80,12 @@ const Wrapper = styled.ul`
   .vote-btn {
     border: transparent;
     background: transparent;
-    color: var(--primary-500);
+    color: var(--grey-600);
     font-size: 1.55rem;
   }
-  .vote-btn:hover {
+  /* .vote-btn:hover {
     color: var(--primary-300);
-  }
+  } */
   .comments-container {
     border-top: 2px solid var(--primary-50);
     display: flex;

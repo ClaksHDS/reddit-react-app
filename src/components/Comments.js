@@ -39,7 +39,6 @@ const Comments = (props) => {
                 </p>
               </header>
               <p className='comment'>{comment.body}</p>
-              {console.log(comment)}
             </div>
           );
         })}

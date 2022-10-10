@@ -8,6 +8,7 @@ import Sidebar from "./Sidebar";
 import Posts from "./Posts";
 import Comments from "./Comments";
 import Footer from "./Footer";
+import ScrollButton from "./ScrollButton";
 
 export {
   Logo,
@@ -19,5 +20,6 @@ export {
   Sidebar,
   Posts,
   Comments,
+  ScrollButton,
   Footer,
 };
