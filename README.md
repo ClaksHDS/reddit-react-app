@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fc7db660-d8f6-428a-8d81-b7ec48693b9d/deploy-status)](https://app.netlify.com/sites/reddit-client-stay-curious/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fc7db660-d8f6-428a-8d81-b7ec48693b9d/deploy-status?branch=dev)](https://app.netlify.com/sites/reddit-client-stay-curious/deploys)
 
 >
 
