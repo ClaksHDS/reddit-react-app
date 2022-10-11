@@ -16,7 +16,12 @@ const Footer = () => {
         <div className='icons-container'>
           <ul>
             <li>
-              <a href='https://github.com/ClaksHDS' target='_blank'>
+              <a
+                href='https://github.com/ClaksHDS'
+                target='_blank'
+                title='navigate to GitHub account'
+                aria-label='visit github account'
+              >
                 <AiOutlineGithub />
               </a>
             </li>
@@ -24,6 +29,8 @@ const Footer = () => {
               <a
                 href='https://www.linkedin.com/in/clarisse-huet-9b931a19b/'
                 target='_blank'
+                title='navigate to LinkedIn account'
+                aria-label='visit LinkedIn account'
               >
                 <AiOutlineLinkedin />
               </a>
@@ -32,6 +39,8 @@ const Footer = () => {
               <a
                 href='https://www.instagram.com/mediacolorpalette/'
                 target='_blank'
+                title='navigate to Instagram account'
+                aria-label='visit Instagram page'
               >
                 <AiOutlineInstagram />
               </a>

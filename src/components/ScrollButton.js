@@ -32,7 +32,6 @@ const ScrollButton = () => {
       <BsArrowUpCircle
         onClick={scrollToTop}
         className='scroll-btn'
-        aria-label='scroll back to the top'
         style={{ display: visible ? "inline" : "none" }}
       />
     </Wrapper>

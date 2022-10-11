@@ -36,7 +36,7 @@ const Wrapper = styled.aside`
     transition: var(--transition);
     text-transform: capitalize;
     display: inline-block;
-    color: var(--grey-900);
+    color: var(--grey-800);
     font-size: 0.55rem;
   }
   .subreddit-link:hover {

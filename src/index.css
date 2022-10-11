@@ -18,7 +18,7 @@ html {
   --primary-200: #fdaa97;
   --primary-300: #fc876d;
   --primary-400: #fb6544;
-  --primary-500: #fa542f;
+  --primary-500: #b11608;
   --primary-600: #c84326;
   --primary-700: #96321c;
   --primary-800: #642213;
@@ -33,11 +33,11 @@ html {
   --grey-500: #627d98;
   --grey-600: #486581;
   --grey-700: #334e68;
-  --grey-800: #243b53;
-  --grey-900: #102a43;
+  --grey-800: #272343;
+  --grey-900: #2d334a;
   /* rest of the colors */
   --black: #1d2424;
-  --white: #fff;
+  --white: #fffffe;
 
   /*Fonts*/
   --font: "Poppins", sans-serif;

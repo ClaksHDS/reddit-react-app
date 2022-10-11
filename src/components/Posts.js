@@ -6,7 +6,12 @@ import { getPosts, getSubredditPosts } from "../features/postsSlice/postsSlice";
 
 /* react icons */
 import { BsArrowDownCircle, BsArrowUpCircle } from "react-icons/bs";
-import { FaUserAstronaut, FaRegCommentDots } from "react-icons/fa";
+import {
+  FaUserAstronaut,
+  FaRegCommentDots,
+  FaLongArrowAltDown,
+  FaLongArrowAltUp,
+} from "react-icons/fa";
 /* styles */
 import Wrapper from "../assets/wrappers/Posts";
 
@@ -68,11 +73,11 @@ const Posts = () => {
                 <div className='content-post'>
                   <div className='votes-container'>
                     <button className='vote-btn' aria-label='cast a up vote'>
-                      <BsArrowUpCircle />
+                      <FaLongArrowAltUp />
                     </button>
                     <span>{post.ups}</span>
                     <button className='vote-btn' aria-label='cast a down vote'>
-                      <BsArrowDownCircle />
+                      <FaLongArrowAltDown />
                     </button>
                   </div>
                   <div className='post-content'>
@@ -88,7 +93,13 @@ const Posts = () => {
                     {post.url.includes("v.redd.it") ||
                     post.url.includes("i.redd.it") ? null : (
                       <div className='post-link'>
-                        <a href={post.url} target='_blank' rel='noreferrer'>
+                        <a
+                          href={post.url}
+                          target='_blank'
+                          rel='noreferrer'
+                          title='check the post'
+                          aria-label='read more about this post'
+                        >
                           {post.url}
                         </a>
                       </div>

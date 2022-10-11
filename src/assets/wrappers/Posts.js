@@ -21,7 +21,7 @@ const Wrapper = styled.ul`
     border-bottom: 2px solid var(--primary-50);
   }
   .info-icon {
-    color: var(--grey-600);
+    color: var(--grey-800);
     margin-right: 0.55rem;
     text-align: center;
   }
