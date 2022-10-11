@@ -48,11 +48,11 @@
 
 >
 
-- Figma to wireframe the application and visualize the end result on smaller and bigger screens. I also create the logo with Figma.
+- **Figma** to wireframe the application and visualize the end result on smaller and bigger screens. I also create the logo with Figma.
   >
-- GithubDesktop to handle version control.
+- **GithubDesktop** to handle version control.
   >
-- Trello to create a board with a checklist of all the different steps of the project, and plan my work.
+- **Trello** to create a board with a checklist of all the different steps of the project, and plan my work.
   >
 
 ### Future work
