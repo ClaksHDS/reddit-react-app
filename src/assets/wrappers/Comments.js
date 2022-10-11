@@ -14,18 +14,22 @@ const Wrapper = styled.div`
   h5 {
     padding-top: 1rem;
     padding-left: 1rem;
+    margin-bottom: 0;
     color: var(--grey-700);
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.95rem;
   }
   .icon {
     margin-right: 0.55rem;
   }
   .posted {
     padding-left: 1rem;
-    padding-bottom: 0;
+    margin-bottom: 0;
     color: var(--grey-600);
     font-style: italic;
   }
-
   .comment {
     padding-left: 1rem;
     padding-bottom: 1rem;

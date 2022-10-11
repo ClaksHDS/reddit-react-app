@@ -5,12 +5,14 @@ import { Loading, NoMatch, Comments } from "../components";
 import { getPosts, getSubredditPosts } from "../features/postsSlice/postsSlice";
 
 /* react icons */
-import { BsArrowDownCircle, BsArrowUpCircle } from "react-icons/bs";
+
 import {
   FaUserAstronaut,
   FaRegCommentDots,
   FaLongArrowAltDown,
   FaLongArrowAltUp,
+  FaRedditAlien,
+  FaRegCommentAlt,
 } from "react-icons/fa";
 /* styles */
 import Wrapper from "../assets/wrappers/Posts";
@@ -57,7 +59,7 @@ const Posts = () => {
               <div className='post-container'>
                 <div className='post-info'>
                   <p>
-                    <FaUserAstronaut className='info-icon' />
+                    <FaRedditAlien className='info-icon' />
                     Published by : <span>{post.author}</span>
                   </p>
                   <p>
@@ -123,7 +125,7 @@ const Posts = () => {
                   aria-label='show comments of the post'
                   onClick={showComments}
                 >
-                  <FaRegCommentDots className='info-icon' />
+                  <FaRegCommentAlt className='info-icon' />
                   <span>{post.num_comments} comments</span>
                 </button>
               </div>

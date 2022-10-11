@@ -22,7 +22,8 @@ const Wrapper = styled.ul`
   }
   .info-icon {
     color: var(--grey-800);
-    margin-right: 0.55rem;
+    font-size: 1.55rem;
+    margin-right: 0.6rem;
     text-align: center;
   }
   .post-info span {

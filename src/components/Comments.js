@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { useSelector } from "react-redux";
 /* react icons */
-import { FaUserAstronaut } from "react-icons/fa";
+import { FaUserAstronaut, FaRedditAlien } from "react-icons/fa";
 /* styles */
 import Wrapper from "../assets/wrappers/Comments";
 
@@ -27,7 +27,7 @@ const Comments = (props) => {
             <div key={comment.id} className='comment-container'>
               <header>
                 <h5>
-                  <FaUserAstronaut className='icon' />
+                  <FaRedditAlien className='icon' />
                   {comment.author}
                 </h5>
                 <p className='posted'>
