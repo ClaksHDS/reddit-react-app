@@ -52,10 +52,10 @@ const Posts = () => {
 
   return (
     <Wrapper>
-      <ul>
+      <aside>
         {posts.map((post) => {
           return (
-            <li key={post.id} className='post-wrapper'>
+            <div key={post.id} className='post-wrapper'>
               <div className='post-container'>
                 <div className='post-info'>
                   <p>
@@ -133,10 +133,10 @@ const Posts = () => {
               <div style={displayComments} className='comments'>
                 <Comments permalink={post.permalink} />
               </div>
-            </li>
+            </div>
           );
         })}
-      </ul>
+      </aside>
     </Wrapper>
   );
 };

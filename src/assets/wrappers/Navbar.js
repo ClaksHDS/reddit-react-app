@@ -15,7 +15,7 @@ const Wrapper = styled.nav`
   .toggle-btn {
     background: transparent;
     border-color: transparent;
-    font-size: 1.75rem;
+    font-size: 2.15rem;
     color: var(--primary-500);
     cursor: pointer;
     display: flex;

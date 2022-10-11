@@ -12,7 +12,7 @@ const Wrapper = styled.aside`
     margin: 0 auto;
     top: 0;
   }
-  ul {
+  .subreddit-wrapper {
     margin: 1rem 2rem;
   }
   .subreddit {
@@ -36,11 +36,11 @@ const Wrapper = styled.aside`
     transition: var(--transition);
     text-transform: capitalize;
     display: inline-block;
-    color: var(--grey-800);
+    color: var(--primary-500);
     font-size: 0.55rem;
   }
   .subreddit-link:hover {
-    color: var(--primary-500);
+    color: var(--primary-400);
   }
   @media (min-width: 990px) {
     .subreddits-container {

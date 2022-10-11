@@ -32,11 +32,11 @@ const Subreddits = () => {
   return (
     <Wrapper>
       <div className='subreddits-container'>
-        <ul>
+        <div className='subreddit-wrapper'>
           {subredditLinks.slice(0, 14).map((subreddit) => {
             const { id, icon_img: icon, url, display_name: name } = subreddit;
             return (
-              <li key={id} className='subreddit'>
+              <div key={id} className='subreddit'>
                 <img
                   src={
                     icon ||
@@ -52,10 +52,10 @@ const Subreddits = () => {
                 >
                   {name}
                 </button>
-              </li>
+              </div>
             );
           })}
-        </ul>
+        </div>
       </div>
     </Wrapper>
   );

@@ -46,6 +46,7 @@ html {
 
   /*rest of the vars */
   --backgroundColor: var(--white);
+  --cardBackground: #f8f5f2;
   --textColor: var(--grey-900);
   --borderRadius: 0.3rem;
   --letterSpacing: 0.6px;
@@ -198,6 +199,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  padding-top: 2rem;
   padding-bottom: 2rem;
 }
 .subreddits-fullpage {

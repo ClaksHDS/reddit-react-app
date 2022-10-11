@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   }
   @media (min-width: 990px) {
     .scroll-btn {
-      height: 4rem;
+      height: 3.5rem;
       left: 30%;
     }
   }

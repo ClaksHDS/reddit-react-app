@@ -17,12 +17,13 @@ const Wrapper = styled.div`
     padding: 0.75rem;
     margin-top: 1rem;
     background: var(--primary-50);
+    border-radius: var(--borderRadius);
   }
   .btn-search {
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--grey-600);
+    color: var(--grey-700);
     font-size: 1.5rem;
     display: flex;
     align-items: center;

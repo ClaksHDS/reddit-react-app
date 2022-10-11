@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Wrapper = styled.ul`
+const Wrapper = styled.aside`
   width: 90vw;
   max-width: var(--maxWidth);
   margin: 0 auto;
@@ -25,9 +25,10 @@ const Wrapper = styled.ul`
     font-size: 1.55rem;
     margin-right: 0.6rem;
     text-align: center;
+    color: var(--grey-800);
   }
   .post-info span {
-    color: var(--grey-800);
+    color: var(--grey-700);
   }
   .post-title {
     margin: 0 auto;
@@ -70,9 +71,6 @@ const Wrapper = styled.ul`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    button {
-      //cursor: pointer;
-    }
     span {
       margin-top: 0.55rem;
       margin-bottom: 0.55rem;
@@ -81,22 +79,22 @@ const Wrapper = styled.ul`
   .vote-btn {
     border: transparent;
     background: transparent;
-    color: var(--grey-600);
+    color: var(--grey-700);
     font-size: 1.55rem;
   }
-  /* .vote-btn:hover {
-    color: var(--primary-300);
-  } */
+
   .comments-container {
     border-top: 2px solid var(--primary-50);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 2rem;
     padding-top: 1rem;
     padding-bottom: 0;
     button {
       border: transparent;
       background: transparent;
+      color: var(--grey-800);
     }
     button:hover {
       color: var(--primary-300);
@@ -104,6 +102,9 @@ const Wrapper = styled.ul`
     span {
       color: var(--primary-500);
       cursor: pointer;
+    }
+    span:hover {
+      color: var(--primary-400);
     }
   }
   @media (min-width: 990px) {
