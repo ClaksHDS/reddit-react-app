@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toggleSidebar } from "../features/sidebarSlice/sidebarSlice";
 import Logo from "./Logo";
 /* react icons */
@@ -9,7 +9,6 @@ import Wrapper from "../assets/wrappers/Navbar";
 
 const Navbar = () => {
   const dispatch = useDispatch();
-  const { sidebar } = useSelector((store) => store.sidebar);
 
   const toggle = () => {
     dispatch(toggleSidebar());

@@ -3,12 +3,8 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Loading, NoMatch, Comments } from "../components";
 import { getPosts, getSubredditPosts } from "../features/postsSlice/postsSlice";
-
 /* react icons */
-
 import {
-  FaUserAstronaut,
-  FaRegCommentDots,
   FaLongArrowAltDown,
   FaLongArrowAltUp,
   FaRedditAlien,

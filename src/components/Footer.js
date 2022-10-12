@@ -1,5 +1,4 @@
 import React from "react";
-import { Logo } from "../components";
 /* import react icons */
 import {
   AiOutlineGithub,
@@ -18,7 +17,9 @@ const Footer = () => {
             <li>
               <a
                 href='https://github.com/ClaksHDS'
+                // eslint-disable-next-line
                 target='_blank'
+                rel='noopener'
                 title='navigate to GitHub account'
                 aria-label='visit github account'
               >
@@ -28,7 +29,9 @@ const Footer = () => {
             <li>
               <a
                 href='https://www.linkedin.com/in/clarisse-huet-9b931a19b/'
+                // eslint-disable-next-line
                 target='_blank'
+                rel='noopener'
                 title='navigate to LinkedIn account'
                 aria-label='visit LinkedIn account'
               >
@@ -38,7 +41,9 @@ const Footer = () => {
             <li>
               <a
                 href='https://www.instagram.com/mediacolorpalette/'
+                // eslint-disable-next-line
                 target='_blank'
+                rel='noopener'
                 title='navigate to Instagram account'
                 aria-label='visit Instagram page'
               >

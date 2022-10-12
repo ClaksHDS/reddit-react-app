@@ -19,7 +19,7 @@ const Wrapper = styled.aside`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.55rem;
   }
   .subreddit-icon {
     width: 1.55rem;

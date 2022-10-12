@@ -34,7 +34,7 @@ const Subreddits = () => {
       <div className='subreddits-container'>
         <div className='subreddit-wrapper'>
           {subredditLinks.slice(0, 17).map((subreddit) => {
-            const { id, icon_img: icon, url, display_name: name } = subreddit;
+            const { id, icon_img: icon, display_name: name } = subreddit;
             return (
               <div key={id} className='subreddit'>
                 <img

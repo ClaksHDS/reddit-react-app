@@ -4,11 +4,7 @@ import {
   setSearch,
   clearSearch,
 } from "../features/searchformSlice/searchformSlice";
-import {
-  filterPosts,
-  getPosts,
-  getSearchPosts,
-} from "../features/postsSlice/postsSlice";
+import { getPosts, getSearchPosts } from "../features/postsSlice/postsSlice";
 /* react icons */
 import { FaSistrix } from "react-icons/fa";
 /* styles */

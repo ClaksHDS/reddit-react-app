@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Error, Landing } from "./pages";
-import { SearchResult } from "./components";
 
 function App() {
   return (

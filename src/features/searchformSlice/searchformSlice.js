@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getSubreddits } from "../subreddits/SubredditSlice";
 
 const initialState = {
   searchTerm: "",

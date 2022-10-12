@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Wrapper from "../assets/wrappers/ErrorPage";
+import styled from "styled-components";
 import img from "../assets/images/not-found.svg";
 
 const NoMatch = () => {
@@ -19,3 +19,17 @@ const NoMatch = () => {
 };
 
 export default NoMatch;
+
+const Wrapper = styled.div`
+  width: 90vw;
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  text-align: center;
+  img {
+    width: 90vw;
+    max-width: 600px;
+    display: block;
+    margin-bottom: 1.75rem;
+  }
+`;

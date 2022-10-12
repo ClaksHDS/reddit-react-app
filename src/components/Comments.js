@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ReactMarkdown from "react-markdown";
-import { useSelector } from "react-redux";
 /* react icons */
-import { FaUserAstronaut, FaRedditAlien } from "react-icons/fa";
+import { FaRedditAlien } from "react-icons/fa";
 /* styles */
 import Wrapper from "../assets/wrappers/Comments";
 
